@@ -1,4 +1,7 @@
 ﻿using EmalingApp;
+using System;
+using System.Net;
+using System.Net.Mail;
 
 public class Program
 {
@@ -10,9 +13,19 @@ public class Program
 
         newEmail.EmailAdress = Console.ReadLine();
 
-        if(newEmail.EmailAdress != null) 
-        { 
-            newEmail.SendEmail(newEmail.EmailAdress);
+        if (newEmail.EmailAdress != null)
+        {
+            try
+            {
+                newEmail.SendEmail(newEmail.EmailAdress);
+            }
+            catch (Exception ex)
+            {                
+                Console.WriteLine(ex.Message);
+                Console.WriteLine(ex.StackTrace);
+                Console.WriteLine(ex.InnerException);
+            }
+            
         }
     }
 }
