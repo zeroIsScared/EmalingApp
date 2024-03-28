@@ -18,6 +18,7 @@ public class Program
             try
             {
                 newEmail.SendEmail(newEmail.EmailAdress);
+
             }
             catch (Exception ex)
             {                

@@ -23,7 +23,6 @@ namespace EmalingApp
             _smtpClient.Credentials = new NetworkCredential("bujornathalia@gmail.com", "b88f15c2650c4bb6c427");
             _smtpClient.EnableSsl = true;
             _smtpClient.DeliveryMethod = SmtpDeliveryMethod.Network;
-
             return _smtpClient;
         }
 
