@@ -31,13 +31,13 @@ namespace EmalingApp
             {               
                 mailMessage.Body = emailText.GetEmailtext();
                 smtpClient.Send(mailMessage);
-                Log = $"Success: An email was sent to {emailAdress} on {emailSendDate} ";                
+                Log = $"SendEmail method was called - Success: An email was sent to {emailAdress} on {emailSendDate} ";                
                 Logs.AddLog(Log);
                 Console.WriteLine("Your first email is on the way.");
             }
             catch
             {
-                Log = $"Failure: There was an error when sending an email to {emailAdress} on {emailSendDate}";
+                Log = $"SendEmail method was called - Failure: There was an error when sending an email to {emailAdress} on {emailSendDate}";
                 Logs.AddLog(Log);
                 throw;
             }
